@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 
 import java.util.*;
 
@@ -40,6 +41,19 @@ public class DevInfoController {
         Pagination<?> pagination = pageMaker.toPagination(pages, 10);
         return ApiResponse.ok(pagination);
     }
+
+    /*
+    @ApiOperation(value = "디바이스 추가")
+    @PostMapping("/management/addDevice")
+    public String sndMsg(@RequestBody HashMap<String, String> requestData)
+    {
+        Page<DevInfoProjection> pages = devInfoService.getDevInfoProjections(PageRequest.of(String, String));
+        Pagination<?> pagination = pageMaker.toPagination(pages, 10);
+        return ApiResponse.ok(pagination);
+
+    }
+     */
+
 /*
     @ApiOperation(value = "내 디바이스 목록 조회")
     @PostMapping("/management/devices")

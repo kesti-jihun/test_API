@@ -34,4 +34,22 @@ public interface DevInfoRepository extends JpaRepository<DevInfo, String> {
             "from DevInfo d, ComMbr m, CdDtl cd   " +
             "where d.cretrId = m.mbrId and cd.cdDtlKey.cdGroupId LIKE '%PROTR' and cd.cdDtlKey.dtlCd = d.protocolRule order by d.cretDt desc")
     Page<DevInfoProjection> selectAllByOrderByCretDtDesc(Pageable pageable);
+
+    /*
+    @Query("select " +
+            "d.devId as devId, " +
+            "d.devName as devName, " +
+            "d.devPassword as devPassword, " +
+            "d.latitVal as latitVal, " +
+            "d.lngitVal as lngitVal, " +
+            "d.protocolRule as protocolRule, " +
+            "d.connStatus as connStatus, " +
+            "d.liveStatus as liveStatus, " +
+            "d.cretrId as cretrId, " +
+            "m.userNm as userNm, " +
+            "cd.dtlCdDesc as protocolRuleName " +
+            "from DevInfo d, ComMbr m, CdDtl cd   " +
+            "where d.cretrId = m.mbrId and cd.cdDtlKey.cdGroupId LIKE '%PROTR' and cd.cdDtlKey.dtlCd = d.protocolRule order by d.cretDt desc")
+    Page<DevInfoProjection> selectAllByOrderByCretDtDesc(Pageable pageable);
+    */
 }
