@@ -11,8 +11,8 @@ spring:
       schema: test_schema1
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://192.168.1.223:5432/itbiz?useUnicode=yes&characterEncoding=UTF-8
-    username: itbiz
-    password: itbiz2021
+    username: itbiz_owner
+    password: itbiz2021@!
 
 
   jpa.hibernate.ddl-auto: none
